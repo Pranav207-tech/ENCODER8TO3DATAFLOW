@@ -36,20 +36,39 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+1. We need to Understand the 8-to-3 Encoder Truth Table and Derive the Boolean Expressions for Outputs
+2. Write the Verilog code for the Dataflow Model.
+3. Run the simulation and check the output in the waveform or terminal.
+4. Verify the outputs match the truth table.
 
 **PROGRAM**
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
-
-Developed by: RegisterNumber:
-*/
-
+Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+```
+Developed by: Pranav K 
+RegisterNumber: 24900545
+```
+```
+odmule enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a,b,c;
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
+endmodule
+```
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+
+![LOGIC GATE](https://github.com/user-attachments/assets/7aad38fa-07a7-42b6-9912-50e6d72dbe41)
+
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
 
+![Screenshot (185)](https://github.com/user-attachments/assets/7d0c6e27-cfbb-4c0c-a195-d3088c1d25d2)
+
+
 **RESULTS**
+Hence Encoder 8 To 3 in Dataflow Modelling is implimented using verilog and validating their functionality using their functional tables
 
 
 
